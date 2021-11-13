@@ -94,6 +94,10 @@ export type DbSvgPathData = {
 	[key in DbIconStyle]: string[];
 }
 
+export type DbIconPack = {
+	[key in DbIconName]: DbIconDefinition;
+}
+
 export interface DbIconDefinition {
 	iconName: DbIconName,
 	svgPathData: DbSvgPathData,

@@ -1,7 +1,7 @@
 const { downloadRelease } = require('@terascope/fetch-github-release');
 
 const USER = 'digibearapp';
-const REPO = 'digibear-home';
+const REPO = 'digibear-icons';
 const OUTPUT_DIR = 'temp';
 const LEAVE_ZIPPED = false;
 const DISABLE_LOGGING = false;
@@ -24,7 +24,7 @@ async function downloadDbIconsRelease() {
         resolve('Successfully downloaded latest digibear-icons release.');
       })
       .catch(function (err) {
-        reject('Could not download latest digibear-icons release.');
+        reject(`Could not download latest digibear-icons release : ${err}`);
       });
   });
 }
