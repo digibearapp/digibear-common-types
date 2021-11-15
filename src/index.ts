@@ -21,10 +21,10 @@ export interface DbPathDefinition {
     opacity: number
 }
 
-const DbIconStyle = ["line", "fill", "duotone"] as const;
-export type DbIconStyle = typeof DbIconStyle[number];
+export const DbIconStyleKeys = ["line", "fill", "duotone"] as const;
+export type DbIconStyle = typeof DbIconStyleKeys[number];
 export function isDbIconStyle(value: string): value is DbIconStyle {
-	return DbIconStyle.indexOf(value as any) !== -1;
+	return DbIconStyleKeys.indexOf(value as any) !== -1;
 }
 
 export interface DbIconContextProps {
@@ -63,7 +63,7 @@ export interface DbIconDefinition {
 	svgPathData: DbSvgPathData,
 }
 
-const DbIconName = ["activity",
+export const DbIconNameKeys = ["activity",
 	"airplay",
 	"alarmCheck",
 	"alarmCross",
@@ -1520,8 +1520,8 @@ const DbIconName = ["activity",
 	"wrench",
 	"wrenchTilt45",
 	"yinYang"] as const;
-export type DbIconName = typeof DbIconName[number];
+export type DbIconName = typeof DbIconNameKeys[number];
 export function isDbIconName(value: string): value is DbIconName {
-    return DbIconName.indexOf(value as any) !== -1;
+    return DbIconNameKeys.indexOf(value as any) !== -1;
 }
     

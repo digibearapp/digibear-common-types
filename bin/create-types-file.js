@@ -42,10 +42,10 @@ function mapNamesToTypes(icons) {
         return `"${icon}"`;
     }).join("");
     return `\
-const DbIconName = [${formatted}] as const;
-export type DbIconName = typeof DbIconName[number];
+export const DbIconNameKeys = [${formatted}] as const;
+export type DbIconName = typeof DbIconNameKeys[number];
 export function isDbIconName(value: string): value is DbIconName {
-    return DbIconName.indexOf(value as any) !== -1;
+    return DbIconNameKeys.indexOf(value as any) !== -1;
 }
     `;
 }
@@ -71,10 +71,10 @@ export interface DbPathDefinition {
     opacity: number
 }
 
-const DbIconStyle = ["line", "fill", "duotone"] as const;
-export type DbIconStyle = typeof DbIconStyle[number];
+export const DbIconStyleKeys = ["line", "fill", "duotone"] as const;
+export type DbIconStyle = typeof DbIconStyleKeys[number];
 export function isDbIconStyle(value: string): value is DbIconStyle {
-	return DbIconStyle.indexOf(value as any) !== -1;
+	return DbIconStyleKeys.indexOf(value as any) !== -1;
 }
 
 export interface DbIconContextProps {
