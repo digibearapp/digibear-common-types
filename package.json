@@ -21,13 +21,14 @@
   "engines": {
     "node": ">=6"
   },
-  "version": "1.0.1",
+  "version": "1.0.4",
   "name": "@digibearapp/digibear-common-types",
   "license": "MIT",
   "scripts": {
     "postinstall": "node attribution.js",
     "build": "rimraf dist && rollup -c",
-    "generate-types": "node ./bin/generate-types-file.js"
+    "generate-types": "node ./bin/generate-types-file.js",
+    "update-git": "git add . && git commit -m $npm_package_version && git push"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -35,10 +36,10 @@
     "@rollup/plugin-typescript": "^8.3.0",
     "@terascope/fetch-github-release": "^0.8.7",
     "chalk": "^4.1.2",
-    "esbuild": "^0.13.10",
+    "esbuild": "^0.13.13",
     "rimraf": "^3.0.2",
-    "rollup": "^2.58.3",
-    "rollup-plugin-dts": "^4.0.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-terser": "^7.0.2",

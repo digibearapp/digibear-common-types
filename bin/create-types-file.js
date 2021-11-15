@@ -37,11 +37,17 @@ function extractNamesFromSVGFiles(folder) {
 function mapNamesToTypes(icons) {
     const formatted = icons.map((icon, index) => {
         if (index != icons.length - 1) {
-            return `"${icon}" | \n\t`;
+            return `"${icon}",\n\t`;
         }
         return `"${icon}"`;
     }).join("");
-    return `export type DbIconName = ${formatted};`;
+    return `\
+const DbIconName = [${formatted}] as const;
+export type DbIconName = typeof DbIconName[number];
+export function isDbIconName(value: string): value is DbIconName {
+    return DbIconName.indexOf(value as any) !== -1;
+}
+    `;
 }
 
 function generateFileLines(namesAsType) {
@@ -65,7 +71,11 @@ export interface DbPathDefinition {
     opacity: number
 }
 
-export type DbIconStyle = "line" | "fill" | "duotone";
+const DbIconStyle = ["line", "fill", "duotone"] as const;
+export type DbIconStyle = typeof DbIconStyle[number];
+export function isDbIconStyle(value: string): value is DbIconStyle {
+	return DbIconStyle.indexOf(value as any) !== -1;
+}
 
 export interface DbIconContextProps {
 	iconStyle?: DbIconStyle;
