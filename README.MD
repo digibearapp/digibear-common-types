@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/digibearapp/digibear-icons-vue">
-    <img src="https://raw.githubusercontent.com/digibearapp/digibear-icons/main/Logo-Snow.svg" width="96px" height="96px" />
+    <img src="https://raw.githubusercontent.com/digibearapp/digibear-icons/main/logos/Logo-Snow.svg" width="96px" height="96px" />
   </a>
 
 <h3 align="center">Digibear Common Types</h3>
