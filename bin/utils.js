@@ -1,21 +1,21 @@
-function clearAndUpper(text) {
-    return text.replace(/-/, "").toUpperCase();
+export function clearAndUpper(text) {
+  return text.replace(/-/, "").toUpperCase();
 }
 
-function toPascalCase(text) {
-    return text.replace(/(^\w|-\w)/g, clearAndUpper);
+export function toPascalCase(text) {
+  return text.replace(/(^\w|-\w)/g, clearAndUpper);
 }
 
-function toCamelCase(text) {
-    return lowerFirstLetter(toPascalCase(text));
+export function toCamelCase(text) {
+  return lowerFirstLetter(toPascalCase(text));
 }
 
-function capitalizeFirstLetter(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
+export function capitalizeFirstLetter(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-function lowerFirstLetter(word) {
-    return word.charAt(0).toLowerCase() + word.slice(1);
+export function lowerFirstLetter(word) {
+  return word.charAt(0).toLowerCase() + word.slice(1);
 }
 
-module.exports = { toPascalCase, toCamelCase, capitalizeFirstLetter };
+// module.exports = { toPascalCase, toCamelCase, capitalizeFirstLetter };
