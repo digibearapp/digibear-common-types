@@ -17,5 +17,3 @@ export function capitalizeFirstLetter(word) {
 export function lowerFirstLetter(word) {
   return word.charAt(0).toLowerCase() + word.slice(1);
 }
-
-// module.exports = { toPascalCase, toCamelCase, capitalizeFirstLetter };

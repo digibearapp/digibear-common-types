@@ -5,11 +5,6 @@ import path from "path";
 import * as constants from "./constants.js";
 import * as paths from "./paths.js";
 import { toCamelCase } from "./utils.js";
-// const fs = require("fs");
-// const path = require("path");
-// const constants = require("./constants");
-// const paths = require("./paths.js");
-// const { toCamelCase } = require("./utils.js");
 
 export function createTypesFile() {
   const folders = fs

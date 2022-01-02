@@ -1,5 +1,4 @@
 import { downloadRelease } from "@terascope/fetch-github-release";
-// const { downloadRelease } = require('@terascope/fetch-github-release');
 
 const USER = "digibearapp";
 const REPO = "digibear-icons";
