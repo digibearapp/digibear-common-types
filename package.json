@@ -11,7 +11,6 @@
     "LICENSE.txt",
     "attribution.js"
   ],
-  "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -27,13 +26,13 @@
   "engines": {
     "node": ">=6"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "@digibearapp/digibear-common-types",
   "license": "MIT",
   "scripts": {
     "postinstall": "node attribution.js",
     "build": "rimraf dist && rollup -c",
-    "generate-types": "node ./bin/generate-types-file.js",
+    "generate-types": "node ./bin/generate-types-file.mjs",
     "update-git": "git add . && git commit -m $npm_package_version && git push"
   },
   "devDependencies": {

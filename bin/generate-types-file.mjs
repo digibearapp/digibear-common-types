@@ -1,8 +1,8 @@
 import chalk from "chalk";
-import * as paths from "./paths.js";
-import { deleteDir } from "./clean-up.js";
-import { downloadDbIconsRelease } from "./download-latest-release.js";
-import { createTypesFile } from "./create-types-file.js";
+import * as paths from "./paths.mjs";
+import { deleteDir } from "./clean-up.mjs";
+import { downloadDbIconsRelease } from "./download-latest-release.mjs";
+import { createTypesFile } from "./create-types-file.mjs";
 
 console.log(`${chalk.inverse.white(" JS ")} generate-types-file.js started.`);
 deleteDir(paths.TEMP_PATH);

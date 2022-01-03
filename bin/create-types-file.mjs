@@ -2,9 +2,9 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import * as constants from "./constants.js";
-import * as paths from "./paths.js";
-import { toCamelCase } from "./utils.js";
+import * as constants from "./constants.mjs";
+import * as paths from "./paths.mjs";
+import { toCamelCase } from "./utils.mjs";
 
 export function createTypesFile() {
   const folders = fs
